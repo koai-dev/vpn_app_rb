@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -24,14 +25,15 @@ import com.ntarevpn.rbpessacash.util.Constant;
 import com.ntarevpn.rbpessacash.util.LockableScrollView;
 import com.ntarevpn.rbpessacash.util.SomeEarnController;
 import com.ironsource.mediationsdk.logger.IronSourceError;
-import com.ironsource.mediationsdk.sdk.OfferwallListener;
+import com.unity3d.ironsourceads.rewarded.RewardedAd;
+import com.unity3d.ironsourceads.rewarded.RewardedAdListener;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class IronSource extends AppCompatActivity implements OfferwallListener {
+public class IronSource extends AppCompatActivity  implements RewardedAdListener {
     private Context activity;
     private static final String TAG = "Custom_Ads_Tag";
     private Dialog dialog;
@@ -63,8 +65,7 @@ public class IronSource extends AppCompatActivity implements OfferwallListener {
         ads_id_controller = new AdsIDController(this);
 
         initIronSource();
-        initAdsListener();
-        com.ironsource.mediationsdk.IronSource.showOfferwall();
+        com.ironsource.mediationsdk.IronSource.showRewardedVideo();
 
         dialog = new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -296,38 +297,43 @@ public class IronSource extends AppCompatActivity implements OfferwallListener {
 
 
     private void initIronSource() {
-        com.ironsource.mediationsdk.IronSource.init(this, ads_id_controller.getIronSourceAppKey(), com.ironsource.mediationsdk.IronSource.AD_UNIT.OFFERWALL);
+        com.ironsource.mediationsdk.IronSource.init(this, ads_id_controller.getIronSourceAppKey(), com.ironsource.mediationsdk.IronSource.AD_UNIT.REWARDED_VIDEO);
     }
 
-    private void initAdsListener() {
-        com.ironsource.mediationsdk.IronSource.setOfferwallListener(this);
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume: ");
+        com.ironsource.mediationsdk.IronSource.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause: ");
+        com.ironsource.mediationsdk.IronSource.onPause(this);
     }
 
 
     @Override
-    public void onOfferwallAvailable(boolean b) {
-        Log.d(TAG, "onOfferwallAvailable: ");
+    public void onRewardedAdClicked(@NonNull RewardedAd rewardedAd) {
 
-
-        com.ironsource.mediationsdk.IronSource.showOfferwall();
     }
 
     @Override
-    public void onOfferwallOpened() {
-        Log.d(TAG, "onOfferwallOpened: ");
+    public void onRewardedAdShown(@NonNull RewardedAd rewardedAd) {
         dialog.dismiss();
     }
 
     @Override
-    public void onOfferwallShowFailed(IronSourceError ironSourceError) {
-        Log.d(TAG, "onOfferwallShowFailed: ");
-
-        com.ironsource.mediationsdk.IronSource.showOfferwall();
+    public void onRewardedAdFailedToShow(@NonNull RewardedAd rewardedAd, @NonNull IronSourceError ironSourceError) {
+        Intent i = new Intent(IronSource.this, Main.class);
+        startActivity(i);
+        finish();
     }
 
     @Override
-    public boolean onOfferwallAdCredited(int i, int i1, boolean b) {
-        Log.d(TAG, "onOfferwallAdCredited: ");
+    public void onUserEarnedReward(@NonNull RewardedAd rewardedAd) {
         Toast.makeText(this, "Added Coin", Toast.LENGTH_SHORT).show();
         if (first_time) {
             first_time = false;
@@ -345,41 +351,12 @@ public class IronSource extends AppCompatActivity implements OfferwallListener {
                 showDialogPoints(1, points_text.getText().toString(), counter);
             }
         }
-
-        return false;
     }
 
     @Override
-    public void onGetOfferwallCreditsFailed(IronSourceError ironSourceError) {
-        Log.d(TAG, "onGetOfferwallCreditsFailed: ");
-    }
-
-    @Override
-    public void onOfferwallClosed() {
-        Log.d(TAG, "onOfferwallClosed: ");
-
+    public void onRewardedAdDismissed(@NonNull RewardedAd rewardedAd) {
         Intent i = new Intent(IronSource.this, Main.class);
         startActivity(i);
-        finish();
-    }
-    //endregion
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d(TAG, "onResume: ");
-        com.ironsource.mediationsdk.IronSource.onResume(this);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d(TAG, "onPause: ");
-        com.ironsource.mediationsdk.IronSource.onPause(this);
-    }
-
-    @Override
-    public void onBackPressed() {
         finish();
     }
 }

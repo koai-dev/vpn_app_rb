@@ -41,5 +41,6 @@
     <dimen name="padding_x2">16dp</dimen>
     <dimen name="horizontal_baseline">32dp</dimen>
     <dimen name="vertical_baseline">56dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 </resources>

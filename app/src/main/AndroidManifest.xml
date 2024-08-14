@@ -9,7 +9,8 @@
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="32"
         tools:ignore="ScopedStorage" />
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"
+    <uses-permission
+        android:name="android.permission.READ_MEDIA_IMAGES"
         tools:ignore="SelectedPhotoAccess" />
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
@@ -21,7 +22,7 @@
         tools:node="remove" />
 
     <application
-        android:name="com.ntarevpn.rbpessacash.AppsConfig"
+        android:name=".AppsConfig"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/vpn_icon"
@@ -32,140 +33,105 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="n">
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            android:resource="@xml/gma_ad_services_config"
+            tools:ignore="ManifestMergerProperty"
+            tools:replace="android:resource" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.GiftCard"
+            android:name=".activity.GiftCard"
             android:label="@string/gift_card" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.Contact"
+            android:name=".activity.Contact"
             android:label="@string/contact_us" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.Redeem"
+            android:name=".activity.Redeem"
             android:label="@string/Redeem"
             android:theme="@style/AppFullScreenTheme" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.VideoAds"
+            android:name=".activity.VideoAds"
             android:label="@string/nav_video" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.Challenges"
+            android:name=".activity.Challenges"
             android:label="@string/nav_challenges" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.Wallet"
+            android:name=".activity.Wallet"
             android:label="@string/Wallet" />
-        <activity android:name="com.ntarevpn.rbpessacash.activity.ReferAndEarn" />
+        <activity android:name=".activity.ReferAndEarn" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.GreatScratch"
+            android:name=".activity.GreatScratch"
             android:label="@string/Great_Scratch" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.Splash"
+            android:name=".activity.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.Main" />
+        <activity android:name=".activity.Signup" />
+        <activity android:name=".activity.Login" />
+        <activity android:name=".activity.Servers" />
+        <activity android:name=".activity.Feedback" />
+        <activity android:name=".activity.ForgotPassword" />
+        <activity android:name=".activity.PurchaseActivity" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.Main" />
-        <activity
-            android:name="com.ntarevpn.rbpessacash.activity.Signup" />
-        <activity
-            android:name="com.ntarevpn.rbpessacash.activity.Login"
-             />
-        <activity
-            android:name="com.ntarevpn.rbpessacash.activity.Servers"
-             />
-        <activity
-            android:name="com.ntarevpn.rbpessacash.activity.Feedback"
-             />
-        <activity
-            android:name="com.ntarevpn.rbpessacash.activity.ForgotPassword"
-             />
-        <activity
-            android:name="com.ntarevpn.rbpessacash.activity.PurchaseActivity"
-             />
-        <activity
-            android:name="com.ntarevpn.rbpessacash.activity.ExtraScratch"
-
+            android:name=".activity.ExtraScratch"
             android:label="@string/Extra_Scratch" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.Scratch"
-
+            android:name=".activity.Scratch"
             android:label="@string/Additional_Scratch" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.ScratchActivity"
-
+            android:name=".activity.ScratchActivity"
             android:label="@string/scratch_to_win"
             tools:ignore="DuplicateActivity" />
+        <activity android:name=".video.Section2Ads" />
+        <activity android:name=".video.Section1Ads" />
+        <activity android:name=".activity.IronSource" />
+        <activity android:name=".activity.FyberAds" />
+        <activity android:name=".activity.Pollfish" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.video.Section2Ads"
-            />
-        <activity
-            android:name="com.ntarevpn.rbpessacash.video.Section1Ads"
-          />
-        <activity
-            android:name="com.ntarevpn.rbpessacash.activity.IronSource"
-            />
-        <activity
-            android:name="com.ntarevpn.rbpessacash.activity.FyberAds"
-            />
-        <activity
-            android:name="com.ntarevpn.rbpessacash.activity.Pollfish"
-           />
-        <activity
-            android:name="com.ntarevpn.rbpessacash.activity.PayEarnGift"
-
+            android:name=".activity.PayEarnGift"
             android:label="@string/pay_earn_gift" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.KingPot"
-
+            android:name=".activity.KingPot"
             android:label="@string/king_pot" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.GoldReward"
-
+            android:name=".activity.GoldReward"
             android:label="@string/gold_reward" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.everydaygif.EverydayGiftEarningActivity"
-
+            android:name=".everydaygif.EverydayGiftEarningActivity"
             android:label="@string/everyday_gifts" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.EverydayGift"
-
+            android:name=".activity.EverydayGift"
             android:label="@string/everyday_gifts"
             tools:ignore="MissingClass" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.SpinToWin"
-
+            android:name=".activity.SpinToWin"
             android:label="@string/spin_and_win" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.TictactoeMain"
-
+            android:name=".activity.TictactoeMain"
             android:label="@string/tic_tac" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.OpenReward"
-
+            android:name=".activity.OpenReward"
             android:label="@string/open_reward" />
+        <activity android:name=".activity.CompSurvey" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.CompSurvey"
-            />
-        <activity
-            android:name="com.ntarevpn.rbpessacash.activity.CollectReward"
-
+            android:name=".activity.CollectReward"
             android:label="@string/collect_reward" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.Policy"
-
+            android:name=".activity.Policy"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.TermCondition"
-
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <activity
-            android:name="com.ntarevpn.rbpessacash.activity.WebViewGoogle"
-
+            android:name=".activity.TermCondition"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.ntarevpn.rbpessacash.activity.LeaderBoard"
-
+            android:name=".activity.WebViewGoogle"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.LeaderBoard"
             android:label="@string/leaderboard" />
 
         <meta-data
@@ -176,11 +142,11 @@
             android:value="@string/admob_app_ads_id" />
 
         <service
-            android:name="com.ntarevpn.rbpessacash.services.PointsService"
+            android:name=".services.PointsService"
             android:enabled="true"
             android:exported="false" />
         <service
-            android:name="com.ntarevpn.rbpessacash.services.FirebasePushMessagingService"
+            android:name=".services.FirebasePushMessagingService"
             android:enabled="true"
             android:exported="false"
             android:permission="TODO">
@@ -196,6 +162,7 @@
             android:noHistory="true"
             android:taskAffinity=".DisconnectVPN"
             android:theme="@style/blinkt.dialog" />
+
         <service
             android:name="top.oneconnectapi.app.core.OpenVPNService"
             android:exported="true"
@@ -227,7 +194,6 @@
         <meta-data
             android:name="applovin.sdk.key"
             android:value="@string/Applovin_SDK_Key" />
-
         <meta-data
             android:name="com.startapp.sdk.RETURN_ADS_ENABLED"
             android:value="false" />
