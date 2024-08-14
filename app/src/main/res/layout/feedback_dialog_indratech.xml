@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CustomCard.Container"
+    android:layout_width="262dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="18dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="32dp">
+
+        <TextView
+            android:id="@+id/feedbackDialogMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How was your experience with us?"
+            android:textAlignment="center"
+            android:textFontWeight="600"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="p" />
+
+        <com.ntarevpn.rbpessacash.views.RatingBarSvg
+            android:id="@+id/feedbackDialogRating"
+            style="@style/CustomRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/feedbackDialogMessage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:numStars="5"
+            android:stepSize="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/feedbackDialogMessage" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/feedbackDialogNever"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/button_dialog_error"
+            android:text="Never"
+            app:layout_constraintEnd_toStartOf="@id/feedbackDialogLater"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/feedbackDialogRating"
+            style="@style/SpecialButton"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/feedbackDialogLater"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:text="Maybe Later"
+            style="@style/SpecialButton"
+            android:background="@drawable/button_dialog_main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/feedbackDialogNever"
+            app:layout_constraintTop_toBottomOf="@id/feedbackDialogRating"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/new_navigation"
+    app:startDestination="@id/newHomeFragment">
+
+    <fragment
+        android:id="@+id/newHomeFragment"
+        android:name="com.ntarevpn.rbpessacash.fragment.HomeFragment"
+        android:label="NewHomeFragment" />
+    <fragment
+        android:id="@+id/newProfileFragment"
+        android:name="com.ntarevpn.rbpessacash.fragment.ProfileFragment"
+        android:label="NewProfileFragment" />
+    <activity
+        android:id="@+id/webViewGoogle"
+        android:name="com.ntarevpn.rbpessacash.activity.WebViewGoogle"
+        android:label="WebViewGoogle" />
+    <activity
+        android:id="@+id/referAndEarn"
+        android:name="com.ntarevpn.rbpessacash.activity.ReferAndEarn"
+        android:label="ReferAndEarn" />
+    <activity
+        android:id="@+id/contactUs"
+        android:name="com.ntarevpn.rbpessacash.activity.Contact"
+        android:label="contact_us"
+        tools:layout="@layout/contact_us_indratech" />
+    <activity
+        android:id="@+id/wallet"
+        android:name="com.ntarevpn.rbpessacash.activity.Wallet"
+        android:label="wallet_activity"
+        tools:layout="@layout/wallet_layout_indratech" />
+    <activity
+        android:id="@+id/webView"
+        android:name="com.ntarevpn.rbpessacash.activity.Policy"
+        android:label="WebView" />
+    <activity
+        android:id="@+id/forgotPasswordActivity"
+        android:name="com.ntarevpn.rbpessacash.activity.ForgotPassword"
+        android:label="ForgotPassword" />
+    <activity
+        android:id="@+id/leaderBoard"
+        android:name="com.ntarevpn.rbpessacash.activity.LeaderBoard"
+        android:label="leader_board"
+        tools:layout="@layout/leader_board_indratech" />
+    <activity
+        android:id="@+id/termCondition"
+        android:name="com.ntarevpn.rbpessacash.activity.TermCondition"
+        android:label="TermCondition" />
+</navigation>

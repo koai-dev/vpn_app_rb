@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/subscriptionRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/subscriptionButtonContainer"
+        android:layout_alignParentTop="true"
+        android:clipToPadding="false"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="90dp" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/subscriptionLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:layout_centerInParent="true"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/subscriptionButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardBackgroundColor="@color/bg_new"
+        app:cardElevation="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="48dp">
+
+            <Button
+                android:id="@+id/subscribeButton"
+                style="@style/SpecialButton"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="24dp"
+                android:text="Buy Subscription Now" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recurring Billing, cancel any time on Google Play Store"
+                android:textAlignment="center"
+                android:textColor="@color/white_50"
+                android:textFontWeight="500" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/exitButtonSubscription"
+        style="@style/CustomCard.ActionCard"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_dismiss"
+            app:tint="@color/white" />
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

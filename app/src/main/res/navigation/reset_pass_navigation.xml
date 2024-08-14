@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reset_pass_navigation"
+    app:startDestination="@id/newForgetPasswordFragment">
+
+    <fragment
+        android:id="@+id/newForgetPasswordFragment"
+        android:name="com.ntarevpn.rbpessacash.fragment.ForgotPasswordFragment"
+        android:label="NewForgetPasswordFragment" >
+        <action
+            android:id="@+id/action_newForgetPasswordFragment_to_newOtpVerificationFragment"
+            app:destination="@id/newOtpVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newOtpVerificationFragment"
+        android:name="com.ntarevpn.rbpessacash.fragment.OtpVerificationFragment"
+        android:label="NewOtpVerificationFragment" >
+        <action
+            android:id="@+id/action_newOtpVerificationFragment_to_newResetPasswordFragment"
+            app:destination="@id/newResetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newResetPasswordFragment"
+        android:name="com.ntarevpn.rbpessacash.fragment.ResetPasswordFragment"
+        android:label="NewResetPasswordFragment" />
+</navigation>

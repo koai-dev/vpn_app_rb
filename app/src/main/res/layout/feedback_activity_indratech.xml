@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvFeedbackDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="125dp"
+        android:lineHeight="42sp"
+        android:text="Feedback"
+        android:textFontWeight="500"
+        android:textSize="42sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="p" />
+
+    <TextView
+        android:id="@+id/tvFeedbackSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:text="Your feedback can benefit us in the future"
+        android:textColor="@color/white_50"
+        android:textFontWeight="500"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tvFeedbackDisplay"
+        tools:targetApi="p" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ratingInputLayout"
+        style="@style/NewTextInputForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="48dp"
+        android:hint="Rating"
+        app:cardBackgroundColor="@color/container_new"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvFeedbackSub">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="14dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rating"
+                android:textSize="12sp" />
+
+            <com.ntarevpn.rbpessacash.views.RatingBarSvg
+                android:id="@+id/ratingInput"
+                style="@style/CustomRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:numStars="5"
+                android:stepSize="1" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/feedbackInputLayout"
+        style="@style/NewTextInputForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:hint="Feedback"
+        app:layout_constraintTop_toBottomOf="@id/ratingInputLayout"
+        app:placeholderText="Tell us anything">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/feedbackInput"
+            style="@style/NewTextInputEditText.Long" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/submitButton"
+        style="@style/SpecialButton"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="48dp"
+        android:elevation="0dp"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@id/feedbackInputLayout" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/exitButtonFeedback"
+        style="@style/CustomCard.ActionCard"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_dismiss"
+            app:tint="@color/white" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

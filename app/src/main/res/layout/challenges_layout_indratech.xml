@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ntarevpn.rbpessacash.activity.Challenges">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_below="@id/toolbar"
+
+        android:padding="10dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/TopSection"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="33dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/banner_gif"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="Available Balance"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/user_points_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center|bottom"
+                            android:text="--"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="bottom"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/text_view_date_activity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="15dp"
+                            android:gravity="center|right"
+                            android:text="07/022/2022"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:id="@+id/MainSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TopSection"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/Card1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary">
+
+                        <TextView
+                            android:id="@+id/Pollfish_Coin"
+                            android:layout_width="@dimen/empty_dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:background="@drawable/ic_task_flag"
+                            android:gravity="center"
+                            android:padding="@dimen/tiny_view_padding"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/Pollfish_Image"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="+" />
+
+                        <ImageView
+                            android:id="@+id/Pollfish_Image"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="@dimen/layout_margin"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white"
+                            tools:src="@drawable/pollfish_ic" />
+
+                        <TextView
+                            android:id="@+id/Pollfish_Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/half_layout_margin"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/Pollfish_Image"
+                            tools:text="Pollfish" />
+
+                        <Button
+                            android:id="@+id/Pollfish_Btn"
+                            android:layout_width="85dp"
+                            android:layout_height="42dp"
+                            android:layout_margin="@dimen/half_layout_margin"
+                            android:layout_marginBottom="20dp"
+                            android:backgroundTint="@color/white"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="Start"
+                            android:textSize="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/Pollfish_Text" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/Card2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary">
+
+                        <TextView
+                            android:id="@+id/Fyber_Coin"
+                            android:layout_width="@dimen/empty_dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:background="@drawable/ic_task_flag"
+                            android:gravity="center"
+                            android:padding="@dimen/tiny_view_padding"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/Fyber_Image_section"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="+10" />
+
+
+                        <ImageView
+                            android:id="@+id/Fyber_Image_section"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="@dimen/layout_margin"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:src="@drawable/fyber_ic" />
+
+                        <TextView
+                            android:id="@+id/Fyber_Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/half_layout_margin"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/Fyber_Image_section"
+                            tools:text="Fyber" />
+
+                        <Button
+                            android:id="@+id/Fyber_Btn"
+                            android:layout_width="85dp"
+                            android:layout_height="42dp"
+                            android:layout_margin="@dimen/half_layout_margin"
+                            android:backgroundTint="@color/white"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="Start"
+                            android:textSize="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/Fyber_Text" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LastSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/MainSection"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="100dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/Card3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary">
+
+                        <TextView
+                            android:id="@+id/ironSource_Coin"
+                            android:layout_width="@dimen/empty_dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:background="@drawable/ic_task_flag"
+                            android:gravity="center"
+                            android:padding="@dimen/tiny_view_padding"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ironSource_Image"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="+10" />
+
+                        <ImageView
+                            android:id="@+id/ironSource_Image"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="20dp"
+                            app:cardCornerRadius="15dp"
+                            app:cardElevation="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/white"
+                            tools:src="@drawable/ironsource_ic" />
+
+                        <TextView
+                            android:id="@+id/ironSource_Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/half_layout_margin"
+                            android:textColor="@color/white"
+                            android:textSize="22dp"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ironSource_Image"
+                            tools:text="ironSource" />
+
+                        <Button
+                            android:id="@+id/ironSource_Btn"
+                            android:layout_width="85dp"
+                            android:layout_height="42dp"
+                            android:layout_margin="@dimen/half_layout_margin"
+                            android:backgroundTint="@color/white"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="Start"
+                            android:textSize="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ironSource_Text" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="0dp" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/Card4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:background="@color/colorPrimary"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/Tapjoy_Coin"
+                            android:layout_width="@dimen/empty_dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="2dp"
+                            android:background="@drawable/ic_task_flag"
+                            android:gravity="center"
+                            android:padding="@dimen/tiny_view_padding"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/Tapjoy_Image_section"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="+10" />
+
+
+                        <ImageView
+                            android:id="@+id/Tapjoy_Image_section"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="@dimen/layout_margin"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:src="@drawable/tapjoy_ic" />
+
+                        <TextView
+                            android:id="@+id/Tapjoy_Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/half_layout_margin"
+                            android:textColor="@color/white"
+                            android:textSize="15dp"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/Tapjoy_Image_section"
+                            tools:text="Tapjoy" />
+
+                        <Button
+                            android:id="@+id/Tapjoy_Btn"
+                            android:layout_width="85dp"
+                            android:layout_height="42dp"
+                            android:layout_margin="@dimen/half_layout_margin"
+                            android:backgroundTint="@color/white"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="Start"
+                            android:textSize="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/Tapjoy_Text" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:elevation="2dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/white" />
+</RelativeLayout>

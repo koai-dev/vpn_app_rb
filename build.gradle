@@ -1,0 +1,44 @@
+buildscript {
+    ext {
+        agp_version = '7.4.2'
+    }
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        // maven { url 'https://maven.fabric.io/public' }
+
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$agp_version"
+        classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.3'
+        // classpath 'io.fabric.tools:gradle:1.31.2'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.5.2'
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven {
+            name "Tapjoy's maven repo"
+            url "https://sdk.tapjoy.com/"
+        }
+        maven {
+            name 'Google'
+            url 'https://maven.google.com/'
+        }
+
+        maven { url "https://artifactory.appodeal.com/appodeal" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

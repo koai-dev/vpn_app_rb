@@ -1,0 +1,222 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:colorBackground">@color/bg_new</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/container_new</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="circularProgressIndicatorStyle">@style/NewCircularProgressIndicator</item>
+    </style>
+
+
+    <style name="Theme.App" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="backgroundColor">@color/bg_new</item>
+        <item name="colorSurface">@color/bg_new</item>
+    </style>
+
+    <style name="ProgressBarTheme">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="ActionBar" parent="Theme.AppCompat">
+        <item name="android:background">@color/bg_new</item>
+        <item name="titleTextAppearance">@style/ActionBar.TitleTextStyle</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+
+    <style name="TextInputLayoutTheme" parent="TextAppearance.AppCompat">
+        <item name="android:textColorPrimary">@color/white</item>
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/white</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+    <style name="ActionBar.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AppFullScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="hintTextColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Button.Small" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/shape_with_ripple_effect</item>
+        <item name="android:gravity">center|center_vertical</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="AppTheme.Button.Secondary">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">#312A75</item>
+    </style>
+
+    <style name="AppTheme.Button" parent="Widget.AppCompat.Button">
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:minHeight">28dp</item>
+        <item name="android:background">@drawable/shape_with_ripple_effect</item>
+        <item name="android:gravity">center|center_vertical</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Title">
+        <item name="android:textColor">@color/cmn_black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Normal">
+        <item name="android:textColor">@color/cmn_black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextView" />
+
+    <style name="TextView.Small">
+        <item name="android:textSize">9sp</item>
+        <item name="alpha">0.5</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="NewTextInputForm" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxBackgroundColor">@color/container_new</item>
+        <item name="android:textColorHint">@drawable/input_text_color</item>
+        <item name="hintTextAppearance">@style/NewTextInputFormText.Hint</item>
+        <item name="hintEnabled">true</item>
+        <item name="android:elevation">0dp</item>
+        <item name="hintAnimationEnabled">false</item>
+        <item name="expandedHintEnabled">false</item>
+        <item name="prefixTextAppearance">@style/NewTextInputFormText</item>
+        <item name="prefixTextColor">@color/white_50</item>
+        <item name="suffixTextAppearance">@style/NewTextInputFormText</item>
+        <item name="suffixTextColor">@color/white_50</item>
+        <item name="helperTextTextAppearance">@style/NewTextInputFormText</item>
+        <item name="helperTextTextColor">@color/white_50</item>
+        <item name="counterTextAppearance">@style/NewTextInputFormText</item>
+        <item name="counterTextColor">@color/white_50</item>
+        <item name="counterOverflowTextAppearance">@style/NewTextInputFormText</item>
+        <item name="counterOverflowTextColor">@color/white_50</item>
+        <item name="placeholderTextAppearance">@style/NewTextInputFormText</item>
+        <item name="placeholderTextColor">@color/white_50</item>
+        <item name="passwordToggleDrawable">@drawable/password_toggle</item>
+        <item name="passwordToggleTint">@color/white_50</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+    </style>
+
+    <style name="NewTextInputEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:paddingTop">34dp</item>
+        <item name="android:textColor">@drawable/input_text_color</item>
+        <item name="android:textColorHint">@color/white_50</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:backgroundTint">@color/container_new</item>
+    </style>
+
+    <style name="NewTextInputEditText.Long">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">top</item>
+        <item name="android:minLines">7</item>
+    </style>
+
+    <style name="NewTextInputFormText">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="NewTextInputFormText.Hint">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="SpecialButton">
+        <item name="android:layout_height">53dp</item>
+        <item name="android:background">@drawable/button_special</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CustomCard">
+        <item name="cardElevation">0dp</item>
+        <item name="cardBackgroundColor">@color/container_new</item>
+    </style>
+
+    <style name="CustomCard.Transparent">
+        <item name="cardBackgroundColor">@color/card_new</item>
+        <item name="cardCornerRadius">15dp</item>
+        <item name="strokeColor">@color/card_border</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="CustomCard.Container">
+        <item name="cardCornerRadius">10dp</item>
+    </style>
+
+    <style name="CustomCard.ActionCard">
+        <item name="cardCornerRadius">7dp</item>
+        <item name="contentPadding">8dp</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+    
+    <style name="CustomRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:minWidth">24dp</item>
+    </style>
+
+    <style name="BottomSheetNavMenu" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetNavMenuModal</item>
+    </style>
+    
+    <style name="BottomSheetNavMenuModal" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_dialog_background</item>
+    </style>
+
+    <style name="NewCircularProgressIndicator">
+        <item name="trackThickness">3dp</item>
+        <item name="trackColor">@color/container_new</item>
+        <item name="indicatorColor">@color/colorPrimary</item>
+    </style>
+
+</resources>

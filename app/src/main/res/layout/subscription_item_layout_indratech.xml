@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/CustomCard.Transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="18dp"
+        android:paddingVertical="12dp">
+
+        <ImageView
+            android:id="@+id/itemCrownIcon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_crown_colored"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/itemSubscriptionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@id/itemCrownIcon"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/itemSubscriptionPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_toStartOf="@id/itemCheckIndicator"
+            android:layout_marginEnd="24dp"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/itemCheckIndicator"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:button="@null"
+            android:clickable="false"
+            android:drawableStart="@drawable/button_radio_server" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

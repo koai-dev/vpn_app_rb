@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/verifyOtpDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="125dp"
+        android:lineHeight="42sp"
+        android:text="OTP Verification"
+        android:textFontWeight="500"
+        android:textSize="42sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="p" />
+
+    <TextView
+        android:id="@+id/verifyOtpSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:text="Input the 6-digits verification code we’ve just sent to your email"
+        android:textColor="@color/white_50"
+        android:textFontWeight="500"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/verifyOtpDisplay"
+        tools:targetApi="p" />
+
+    <in.aabhasjindal.otptextview.OtpTextView
+        android:id="@+id/otpVerifyInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/white"
+        app:bar_enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/verifyOtpSub"
+        app:length="6"
+        app:otp_box_background="@drawable/otp_background"
+        app:otp_text_size="18sp"
+        app:width="42dp" />
+
+    <Button
+        android:id="@+id/otpVerifyButton"
+        style="@style/SpecialButton"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="48dp"
+        android:elevation="0dp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

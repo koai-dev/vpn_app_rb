@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1051287174875",
+    "project_id": "cashvpn",
+    "storage_bucket": "cashvpn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051287174875:android:cb5d7910e5edea9f01d6fe",
+        "android_client_info": {
+          "package_name": "com.ntarevpn.rbpessacash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD75SSCJji8lCw1dFItCKJkhWl90sG2lT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

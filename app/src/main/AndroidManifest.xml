@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"
+        tools:ignore="SelectedPhotoAccess" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
+
+    <application
+        android:name="com.ntarevpn.rbpessacash.AppsConfig"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/vpn_icon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/vpn_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="n">
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.GiftCard"
+            android:label="@string/gift_card" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.Contact"
+            android:label="@string/contact_us" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.Redeem"
+            android:label="@string/Redeem"
+            android:theme="@style/AppFullScreenTheme" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.VideoAds"
+            android:label="@string/nav_video" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.Challenges"
+            android:label="@string/nav_challenges" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.Wallet"
+            android:label="@string/Wallet" />
+        <activity android:name="com.ntarevpn.rbpessacash.activity.ReferAndEarn" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.GreatScratch"
+            android:label="@string/Great_Scratch" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.Splash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.Main" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.Signup" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.Login"
+             />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.Servers"
+             />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.Feedback"
+             />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.ForgotPassword"
+             />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.PurchaseActivity"
+             />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.ExtraScratch"
+
+            android:label="@string/Extra_Scratch" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.Scratch"
+
+            android:label="@string/Additional_Scratch" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.ScratchActivity"
+
+            android:label="@string/scratch_to_win"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.video.Section2Ads"
+            />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.video.Section1Ads"
+          />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.IronSource"
+            />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.FyberAds"
+            />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.Pollfish"
+           />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.PayEarnGift"
+
+            android:label="@string/pay_earn_gift" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.KingPot"
+
+            android:label="@string/king_pot" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.GoldReward"
+
+            android:label="@string/gold_reward" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.everydaygif.EverydayGiftEarningActivity"
+
+            android:label="@string/everyday_gifts" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.EverydayGift"
+
+            android:label="@string/everyday_gifts"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.SpinToWin"
+
+            android:label="@string/spin_and_win" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.TictactoeMain"
+
+            android:label="@string/tic_tac" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.OpenReward"
+
+            android:label="@string/open_reward" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.CompSurvey"
+            />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.CollectReward"
+
+            android:label="@string/collect_reward" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.Policy"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.TermCondition"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.WebViewGoogle"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.ntarevpn.rbpessacash.activity.LeaderBoard"
+
+            android:label="@string/leaderboard" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_ads_id" />
+
+        <service
+            android:name="com.ntarevpn.rbpessacash.services.PointsService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.ntarevpn.rbpessacash.services.FirebasePushMessagingService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="TODO">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="top.oneconnectapi.app.DisconnectVPNActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:noHistory="true"
+            android:taskAffinity=".DisconnectVPN"
+            android:theme="@style/blinkt.dialog" />
+        <service
+            android:name="top.oneconnectapi.app.core.OpenVPNService"
+            android:exported="true"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher_round" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimaryDark" />
+
+        <activity
+            android:name="com.vungle.warren.ui.VungleActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <provider
+            android:name="com.vungle.warren.utility.VungleProvider"
+            android:authorities="${applicationId}.vungle-provider"
+            android:exported="false" />
+
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="@string/Applovin_SDK_Key" />
+
+        <meta-data
+            android:name="com.startapp.sdk.RETURN_ADS_ENABLED"
+            android:value="false" />
+    </application>
+
+</manifest>
