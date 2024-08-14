@@ -3,7 +3,7 @@ package com.ntarevpn.rbpessacash;
 public class ApiBaseUrl {
 
 
-    public static final String ADMIN_URL = "https://iradiyo.com";
+    public static final String ADMIN_URL = "https://iradiyo.com/";
     public static final String EXTRA_PARAMS = "main";
     public static final String BASE_API = "/api/";
     public static final String BASE_URL = ADMIN_URL + BASE_API;
